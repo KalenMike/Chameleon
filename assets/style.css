@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    background-color: #121212;
+    color: #eee;
+    text-align: center;
+    margin:0 1em 1em;
+}
+
+.device {
+    display: inline-block;
+    margin: 2em;
+    border: 1px solid #0a0a0a;
+    transform-origin: 0 0;
+    border-radius: 6px;
+}
+
+.screen {
+    background-color: #eee;
+}
+
+.header {
+    padding: 0.5em 0;
+    text-align: center;
+    color: #eee;
+    background-color: #0a0a0a;
+    text-align: center;
+}
+
+.size {
+    font-size: 0.7em;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Forms */
+input {
+    border-radius: 0;
+    border: 2px solid transparent;
+    padding: 0.7em;
+    font-size: 1em;
+    font-family: "Poppins", sans-serif;
+    outline: none;
+}
+
+input:focus {
+    border-color: #66e2a0;
+}
+
+button {
+    font-size: 1em;
+    border-radius: 0;
+    background: none;
+    color: #66e2a0;
+    border: 2px solid #66e2a0;
+    padding: 0.7em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    font-family: "Poppins", sans-serif;
+}
+
+button:hover {
+    background: #66e2a0;
+    color: #eee;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 482px) {
+    .row {
+        flex-direction: column;
+    }
+
+    input {
+        margin-bottom: 1em;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    button + button {
+        margin-top: 1em;
+    }
+    .col:nth-child(1) {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1000px) {
+    input{
+        width:100%;
+    }
+    button {
+        margin-top: 1em;
+        width: 49%;
+    }
+    .col:nth-child(1) {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1em;
+    }
+
+    .col:nth-child(1) {
+        text-align: left;
+        flex: 1;
+    }
+}
